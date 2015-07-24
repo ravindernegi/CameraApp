@@ -1,0 +1,20 @@
+  <ion-pane ng-controller="PhotoController as vm">
+    <ion-header-bar class="bar-stable">
+      
+	   <div class="buttons">
+        <button ng-click="vm.go('home')" class="button button-icon icon ion-home"></button>
+      </div>
+
+
+
+    </ion-header-bar>
+    <ion-content> 
+           
+      <ion-list>
+        <ion-item ng-repeat="b in vm.photos" >
+          <div >{{ b.photoPath }} <br/> {{ b.photoName }}</div>
+ 
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-pane>

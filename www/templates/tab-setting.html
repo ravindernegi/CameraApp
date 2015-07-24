@@ -1,0 +1,13 @@
+<ion-view view-title="Set A Default Gallery">
+  <ion-content>
+    <ion-list ng-init="loadAlbums()">
+	  
+	    <ion-radio ng-repeat="album in albums"
+                   ng-value="album.id"
+				   ng-model="DefaultDir"
+                    ng-change='setDefaultDir(album.id)'  >
+          {{album.albumName}}
+        </ion-radio>
+    </ion-list>
+  </ion-content>
+</ion-view>

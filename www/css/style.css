@@ -1,0 +1,14 @@
+#holdOptions{margin:0 auto 60px auto;width: 80%;}
+#holdOptions .list .ion-ios-folder-outline{font-size:20px;  color: #4f8ef7;}
+#holdOptions .item-content {padding:0;}
+#holdOptions .item-content .item, #holdOptions .item-content .item.activated{background:none;}
+#holdOptions .item-radio input:checked ~ .item-content{background:none;}
+
+.folderMainScreen .col-25, .folderMainScreen .col{text-align:center;}
+.logo{font-size: 85px;margin: 0 10px 0px 0;float: left;}
+.header{margin-bottom:30px;}
+.logoText{  font-size: 40px; float: left;}
+.item{padding:10px 16px;}
+.item-content, .item-complex{padding:0;}
+.logosection{margin:0 auto; width:225px;}
+

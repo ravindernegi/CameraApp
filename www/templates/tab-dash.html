@@ -1,0 +1,54 @@
+<ion-view title="Home" hide-nav-bar="true"  >
+  <ion-content class="padding"  >
+ 
+ 
+ <div class="row header">
+  <div class="col"> <div class="logosection"><span class="ion-ios-camera logo"></span> <h3 class="logoText">PicCap</h3></div></div>
+</div>
+
+
+
+ <div id="holdOptions"    > 
+ <div class="item item-divider">
+   Default Folder is <span id="albumDefaultName">{{albumDefault.albumName}}</span>
+    
+  </div>
+
+
+	
+	<ion-list show-delete="shouldShowDelete">
+  <ion-item  ng-repeat="album in albums" >
+    <ion-delete-button class="ion-minus-circled" ng-click="remove(album)" ng-hide="album._id=='eg_family_and_vacation'"></ion-delete-button>
+	<ion-radio 
+                   ng-value="album._id"
+				   ng-model="DefaultDir"
+                    ng-click='setDefaultDir(album)' name="DefaultDir"  ><i class="ion-ios-folder-outline"></i>
+  	 {{album.albumName}}  </ion-radio>
+  </ion-item>
+</ion-list>
+
+	
+	</div>
+      
+  </ion-content>
+  
+  <ion-footer-bar align-title="left" class="bar folderMainScreen row">
+  
+   <div class="col col-25">
+   		<button class="button  button-icon icon ion-ios-plus-outline" ng-click="addAlbum(albumDefault)"></button>
+   </div>
+  	<div class="col col-25">	
+  		<button class="button  button-icon icon ion-images" ng-click="go('albums')"></button>
+  	 </div>
+	 
+	 <div class="col col-25">	
+  		<button class="button  button-icon icon ion-image" ng-click="go('photos')"></button>
+  	 </div>
+  	<div class="col col-25">	
+		<button class="button  button-icon icon ion-ios-camera-outline" ng-click="addImage()"></button>
+	 </div>
+  	<div class="col col-25">	
+		<button class="button button-icon  icon ion-ios-trash-outline" ng-click="showDeleteButtons()"></button>
+	 </div>	
+  </ion-footer-bar>
+</ion-view>

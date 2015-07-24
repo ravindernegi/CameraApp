@@ -1,0 +1,28 @@
+
+<ion-view view-title="Photo Gallery" >
+ <ion-nav-buttons side="right">
+  <button class="button" ng-click="addAlbum()">
+    <i class="icon ion-plus-round"></i>
+  </button>
+</ion-nav-buttons>
+  <ion-content>
+    <ion-list >
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="album in albums" type="item-text-wrap" href="#/albums/{{album._id}}">
+
+        <h2>{{album.albumName}}</h2>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(album)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer-bar align-title="left" class="bar folderMainScreen">
+  
+   <div class="col">
+	
+		<button class="button button-icon  icon ion-ios-home-outline" ng-click="go('dash')"></button>
+	 </div>	
+  </ion-footer-bar>
+</ion-view>

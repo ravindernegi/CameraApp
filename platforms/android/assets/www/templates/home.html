@@ -1,0 +1,23 @@
+  <ion-pane ng-controller="FolderController as vm">
+    <ion-header-bar class="bar-stable">
+      
+	   <div class="buttons">
+        <button ng-click="vm.go('photo')" class="button button-icon icon ion-images"></button>
+      </div>
+	   <div class="buttons">
+        <button ng-click="vm.addImage()" class="button button-icon icon ion-camera"></button>
+      </div>
+      <div class="buttons">
+        <button ng-click="vm.showAddFolderModal()" class="button button-icon icon ion-android-add"></button>
+      </div>
+
+    </ion-header-bar>
+    <ion-content>        
+      <ion-list>
+        <ion-item ng-repeat="b in vm.folders" ng-click="vm.showEditFolderModal(b)">
+          <div style="float: left">{{ b.folderName }} <br/>{{ b.photoName }}</div>
+ 
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-pane>
